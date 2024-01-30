@@ -38,11 +38,10 @@
         .header-text,
         .start-game-text {
             text-align: center;
-            font-weight: bold;
             margin-top: 50px;
             font-size: 30px;
             color: white;
-            -webkit-text-stroke: 1px black; /* Adiciona sombra ao texto */
+            text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black; /* Adiciona sombra ao texto */
             padding: 10px; /* espaço interno */
         }
 
@@ -99,7 +98,7 @@
             <div class="webgl-logo"></div>
             <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
             <div class="title">Vire a tela para ampliar</div>
-            <div class="start-game-text">Clique em OK para iniciar o jogo</div>
+            <div class="start-game-text">Clique em OK para iniciar o jogo e aumente o volume</div>
         </div>
     </div>
 </body>
