@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Vire a tela para ampliar</title>
@@ -8,18 +9,65 @@
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://i0.wp.com/centralblogs.com.br/wp-content/uploads/2018/12/fundo-rosa-background44.jpg?fit=1200%2C750&ssl=1');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .webgl-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #unityContainer {
+            width: 960px;
+            height: 600px;
+        }
+
+        .footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .webgl-logo {
+            /* Add styles for the webgl-logo class if needed */
+        }
+
+        .fullscreen {
+            /* Add styles for the fullscreen class if needed */
+        }
+
+        .title {
+            /* Add styles for the title class if needed */
+        }
+    </style>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Eduardabrigadeiros.json", {onProgress: UnityProgress});
+        var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Eduardabrigadeiros.json", {
+            onProgress: UnityProgress
+        });
     </script>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="webgl-content">
-      <div id="unityContainer" style="width: 960px; height: 600px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">Vire a tela para ampliar</div>
-      </div>
+        <div id="unityContainer"></div>
+        <div class="footer">
+            <div class="webgl-logo"></div>
+            <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+            <div class="title">Vire a tela para ampliar</div>
+        </div>
     </div>
-  </body>
+</body>
+
 </html>
