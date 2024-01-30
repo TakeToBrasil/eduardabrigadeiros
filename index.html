@@ -54,6 +54,13 @@
         .title {
             /* Add styles for the title class if needed */
         }
+
+        .start-game-text {
+            font-weight: bold;
+            font-size: 18px;
+            color: #000; /* Cor com bom contraste com o rosa */
+            margin-top: 10px;
+        }
     </style>
     <script>
         var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Eduardabrigadeiros.json", {
@@ -69,7 +76,7 @@
             <div class="webgl-logo"></div>
             <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
             <div class="title">Vire a tela para ampliar</div>
-            <div>Clique em OK para iniciar o jogo</div>
+            <div class="start-game-text">Clique em OK para iniciar o jogo e aumente o  volume</div>
         </div>
     </div>
 </body>
