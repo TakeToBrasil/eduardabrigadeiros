@@ -18,6 +18,27 @@
             background-position: center;
             background-attachment: fixed;
             font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .logo {
+            width: 200px; /* ajuste conforme necessário */
+            height: auto; /* para manter a proporção */
+        }
+
+        .header-text {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 24px;
+            color: #000;
         }
 
         .webgl-content {
@@ -57,7 +78,7 @@
 
         .start-game-text {
             font-weight: bold;
-            font-size: 18px;
+            font-size: 24px;
             color: #000; /* Cor com bom contraste com o rosa */
             margin-top: 10px;
         }
@@ -70,13 +91,17 @@
 </head>
 
 <body>
+    <div class="header">
+        <img class="logo" src="TemplateData/logo.png" alt="Logo da Eduarda Brigadeiros">
+        <div class="header-text">Peça hoje seu hambúrguer na Eduarda Brigadeiros</div>
+    </div>
     <div class="webgl-content">
         <div id="unityContainer"></div>
         <div class="footer">
             <div class="webgl-logo"></div>
             <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
             <div class="title">Vire a tela para ampliar</div>
-            <div class="start-game-text">Clique em OK para iniciar o jogo e aumente o  volume</div>
+            <div class="start-game-text">Clique em OK para iniciar o jogo</div>
         </div>
     </div>
 </body>
